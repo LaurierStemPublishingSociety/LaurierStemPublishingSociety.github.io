@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LSPS</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laurier STEM Publishing Society</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style id="sections-styles">
+/* CSS for section section:header */
+.hero-section {
+    position: relative;
+    height: 801px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: visible; /* Allow seal to overflow */
+    color: var(--color-text);
+}
+
+.hero-background {
+    position: absolute;
+    top: -232px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1996px;
+    height: 903px;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.hero-bg-shape {
+    position: absolute;
+    border-radius: 9px;
+    transform: rotate(180deg);
+}
+
+.hero-bg-shape-1 {
+    width: 1898px;
+    height: 880px;
+    top: 0;
+    left: 49px;
+    background-size: cover;
+    opacity: 0.55;
+}
+
+.hero-bg-shape-2 {
+    width: 1996px;
+    height: 903px;
+    top: 28px;
+    left: 0;
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-border-light);
+    opacity: 0.63;
+    z-index: -1;
+}
+
+
+.hero-content {
+    margin-top: 123px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.hero-title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.hero-subtitle {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.hero-cta {
+    margin-top: 58px;
+    border: 2px solid var(--color-text);
+    border-radius: 40px;
+    padding: 17px 43px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+    transition: background-color 0.3s, color 0.3s;
+}
+.hero-cta:hover {
+    background-color: var(--color-text);
+    color: var(--color-background);
+}
+
+.hero-seal {
+    position: absolute;
+    width: 378px;
+    height: 213px;
+    bottom: -106px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .hero-section { 
+        height: auto; 
+        padding-bottom: 120px; 
+    }
+    .hero-title { font-size: 28px; }
+    .hero-subtitle { font-size: 22px; }
+    .hero-cta { font-size: 20px; padding: 14px 35px; }
+    .hero-seal { width: 250px; height: auto; bottom: -60px; }
+}
+
+/* CSS for section section:intro */
+.intro-section {
+    padding-top: 188px;
+    position: relative;
+}
+
+.intro-section::before {
+    content: '';
+    position: absolute;
+    top: 66px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 122px;
+    width: 1px;
+    background-color: var(--color-border-light);
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.intro-text {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 577px;
+}
+
+@media (max-width: 768px) {
+    .intro-section {
+        padding-top: 120px;
+    }
+    .intro-text {
+        font-size: 20px;
+    }
+}
+
+/* CSS for section section:about */
+.about-section {
+    padding: 41px 0 80px;
+    position: relative;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    background-color: var(--color-border-light);
+    z-index: -1;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+.about-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image-wrapper img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.about-text-wrapper {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.about-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 36px;
+}
+
+.about-item.reverse .about-text-wrapper {
+    order: -1;
+}
+
+.about-text-wrapper.text-right {
+    text-align: right;
+}
+
+@media (max-width: 992px) {
+    .about-item {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    .about-item.reverse .about-text-wrapper {
+        order: 0;
+    }
+    .about-text-wrapper.text-right {
+        text-align: center;
+    }
+}
+
+/* CSS for section section:events */
+.events-section {
+    padding: 80px 0;
+}
+
+.events-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.events-title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.events-image {
+    width: 366px;
+    border: 1px solid var(--color-text);
+    opacity: 0.84;
+    margin-bottom: 41px;
+}
+
+/* CSS for section section:footer */
+.footer-section {
+    position: relative;
+    height: 416px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.footer-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 290px;
+    width: 1px;
+    background-color: var(--color-border-light);
+}
+
+.footer-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2378px;
+    height: 595px;
+    z-index: -2;
+}
+
+.footer-bg-shape {
+    position: absolute;
+    border-radius: 9px;
+}
+
+.footer-bg-shape-1 {
+    width: 2260px;
+    height: 581px;
+    top: 33px;
+    left: 59px;
+    background-size: cover;
+    opacity: 0.63;
+}
+
+.footer-bg-shape-2 {
+    width: 2378px;
+    height: 595px;
+    top: 0;
+    left: 0;
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-border-light);
+    opacity: 0.63;
+    z-index: -1;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-top: 290px;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 61px;
+}
+
+.social-links a {
+    opacity: 0.79;
+    transition: opacity 0.3s;
+}
+
+.social-links a:hover {
+    opacity: 1;
+}
+
+.social-links img {
+    width: 45px;
+    height: 45px;
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        height: auto;
+        padding: 120px 0 60px;
+    }
+    .footer-container {
+        margin-top: 0;
+    }
+    .footer-section::before {
+        display: none;
+    }
+}
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<!-- Modern Navigation Bar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <span class="brand-text">LSPS</span>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#section-hero" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="team.html" class="nav-link">Our Team</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://laurierstudentsunion.presence.io/event/lsps-scrapbooking-event" class="nav-link">Events</a>
+            </li>
+            <li class="nav-item">
+                <a href="#section-footer" class="nav-link">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<header id="section-hero" class="hero-section">
+    <div class="hero-background">
+        <div class="hero-bg-shape hero-bg-shape-1" style="background-image: url('images/6dfd8eb0d3b2b180511d35198c11b7d65ca28084.png');"></div>
+        <div class="hero-bg-shape hero-bg-shape-2"></div>
+    </div>
+
+    <div class="page-wrapper">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Laurier STEM Publishing Society</h1>
+                <p class="hero-subtitle">Join us in fostering STEM publishing excellence!</p>
+                <a href="https://laurierstudentsunion.presence.io/organization/laurier-stem-publishing-society-waterloo" class="hero-cta">Get Involved</a>
+            </div>
+        </div>
+    </div>
+    <img src="images/c9bda7f6ad5730cd0638c6c342f1d07bb2df1681.png" alt="Laurier STEM Publishing Society Seal" class="hero-seal">
+</header>
+<section id="section-intro" class="intro-section">
+    <div class="container intro-container">
+        <div class="divider-wrapper">
+            <hr class="divider-line" style="width: 55.3%;">
+            <hr class="divider-line" style="width: 55.3%;">
+        </div>
+        <p class="intro-text">
+            Laurier STEM Publishing Society (LSPS) is made of many science and publishing passionate Waterloo campus students!
+        </p>
+    </div>
+</section>
+<section id="section-about" class="about-section">
+    <div class="container about-container">
+        <div class="divider-wrapper">
+            <hr class="divider-line" style="width: 55.3%;">
+            <hr class="divider-line" style="width: 55.3%;">
+        </div>
+        <div class="about-item">
+            <div class="about-image-wrapper">
+                <img src="images/6b31ad3070cc7823732c555353eff768fa2f3f2c.png" alt="A person reading a book outdoors">
+            </div>
+            <div class="about-text-wrapper">
+                <h2 class="about-title">About Us</h2>
+                <p>Our objective is to promote a welcoming environment for students in STEM that are interested in publishing in any field by discussing publication processes.</p>
+            </div>
+        </div>
+
+        <div class="about-item reverse">
+            <div class="about-image-wrapper">
+                <img src="images/a7ab8c0696cb01df630231147020020c06be70e6.png" alt="Students and a teacher conducting a science experiment in a lab">
+            </div>
+            <div class="about-text-wrapper text-right">
+                <h2 class="about-title">Our Mission</h2>
+                <p>We want to provide support for students by having monthly discussion portals to contribute to each other's publishing goals and editorial support from publishing companies and experienced individuals.</p>
+            </div>
+        </div>
+
+        <div class="about-item">
+            <div class="about-image-wrapper">
+                <img src="images/e6d8c22dcfaf648510da49e7645c09aecd9db868.png" alt="A stack of books on a table in a library">
+            </div>
+            <div class="about-text-wrapper">
+                <p>We hope to work with other clubs of aligned interest and bring in guest speakers in the writing industry to build connections. Most importantly, we look forward to making life-long relationships with like-minded people! 🔬🥼💻📈💡</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="section-events" class="events-section">
+    <div class="container events-container">
+        <div class="divider-wrapper">
+            <hr class="divider-line" style="width: 43%;">
+            <hr class="divider-line" style="width: 43%;">
+        </div>
+        <h2 class="events-title">Past Events!</h2>
+                <div style="display: flex; gap: 24px; justify-content: center;">
+                    <img src="images/event.jpg" alt="Events collage" class="events-image">
+                    <img src="images/LSPS Meet The Publisher Event.png" alt="Events collage" class="events-image">
+                </div>
+        <div class="divider-wrapper">
+            <hr class="divider-line" style="width: 43%;">
+            <hr class="divider-line" style="width: 43%;">
+        </div>
+    </div>
+</section>
+<footer id="section-footer" class="footer-section">
+    <div class="footer-background">
+        <!--merged image-->
+        <div class="footer-bg-shape footer-bg-shape-1" style="background-image: url('images/6dfd8eb0d3b2b180511d35198c11b7d65ca28084.png');"></div>
+        <div class="footer-bg-shape footer-bg-shape-2"></div>
+    </div>
+    <div class="container footer-container">
+        <div class="divider-wrapper">
+            <hr class="divider-line" style="width: 22.2%;">
+            <hr class="divider-line" style="width: 22.2%;">
+        </div>
+        <div class="social-links">
+            <a href="https://www.tiktok.com/@lauriersps" aria-label="TikTok"><img src="images/7a11e6518c1127ec17d8bf036f1dab3466f99621.png" alt="TikTok icon"></a>
+            <a href="https://www.instagram.com/laurierstempublishingsociety?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram"><img src="images/c989d1bc9130dc61d956178d67ea0865e881036b.png" alt="Instagram icon"></a>
+            <a href="mailto:laurierstempublishingsociety@gmail.com" aria-label="Email"><img src="images/8310a57ecce051bd1fbb0c0537c722bdd9f1379c.png" alt="Email icon"></a>
+            <a href="https://www.linkedin.com/company/laurier-stem-publishing-society/" aria-label="LinkedIn"><img src="images/linkedin.png" alt="LinkedIn icon"></a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
