@@ -1,0 +1,31 @@
+/*
+ * Design tokens: the club's colours, fonts and spacing.
+ * Change a colour here and it updates everywhere. Mint = the wax seal, plum = the ink in the logo.
+ */
+
+:root {
+  /* Colour */
+  --ink: #2b2140; /* body text — aubergine black */
+  --ink-soft: #5c536f; /* secondary text */
+  --plum: #45355f; /* seal illustration purple — primary actions */
+  --plum-dark: #33264a;
+  --wax: #aecbc4; /* the seal's mint wax */
+  --wax-light: #dbe9e5;
+  --wax-text: #2f5d53; /* mint dark enough for text */
+  --lilac: #e6e0f1;
+  --paper: #f4f7f5; /* cool, slightly minty page */
+  --surface: #ffffff;
+  --line: #d4ddd9;
+
+  /* Type */
+  --serif: "Literata", Georgia, serif;
+  --sans: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Layout */
+  --max: 1120px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --radius-sm: 6px;
+  --radius: 14px;
+
+  color-scheme: light;
+}

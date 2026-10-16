@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Journaling & collage workshop",
+    "start": "2026-09-24T17:30",
+    "end": "2026-09-24T19:30",
+    "location": "TBA",
+    "type": "Workshop",
+    "description": "Members decorated their own journals with collage, stickers and paper scraps.",
+    "image": "/images/events/journal-workshop.jpg",
+    "link": ""
+  },
+  {
+    "title": "Meet the Publisher",
+    "start": "2026-10-07T18:00",
+    "end": "2026-10-07T19:30",
+    "location": "TBA",
+    "type": "Guest speaker",
+    "description": "An informal conversation with a publisher about how books and articles get from draft to print.",
+    "image": "/images/events/meet-the-publisher.jpg",
+    "link": ""
+  },
+  {
+    "title": "Monthly discussion circle",
+    "start": "2026-10-28T18:00",
+    "end": "2026-10-28T19:00",
+    "location": "TBA",
+    "type": "Discussion",
+    "description": "Bring a draft, a question or just curiosity. We'll talk through one part of the publishing process together.",
+    "image": "",
+    "link": ""
+  },
+  {
+    "title": "LSPS Book Drive",
+    "start": "2026-11-12T11:00",
+    "end": "2026-11-12T15:00",
+    "location": "TBA",
+    "type": "Community",
+    "description": "Drop off gently used books.",
+    "image": "",
+    "link": "https://laurierstudentsunion.presence.io/event/lsps-book-drive"
+  },
+  {
+    "title": "Monthly discussion circle",
+    "start": "2026-11-25T18:00",
+    "end": "2026-11-25T19:00",
+    "location": "TBA",
+    "type": "Discussion",
+    "description": "Our end-of-term discussion. Share what you've been working on and get feedback from other members.",
+    "image": "",
+    "link": ""
+  }
+]

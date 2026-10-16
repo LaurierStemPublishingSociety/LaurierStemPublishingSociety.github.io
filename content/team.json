@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Niti Gandhi",
+    "role": "President",
+    "bio": "Niti monitors the goals of the club and runs club meetings. She also works closely with the events executives to plan events.",
+    "photo": "/images/team/niti.jpg",
+    "focus": "top"
+  },
+  {
+    "name": "Vishwa Lad",
+    "role": "VP of Marketing",
+    "bio": "Vishwa works closely with the social media team to execute ideas on social media and supports them when needed.",
+    "photo": "/images/team/vishwa.jpg",
+    "focus": "center"
+  },
+  {
+    "name": "Naseeb Rai",
+    "role": "VP of Marketing",
+    "bio": "Naseeb works with the events team on ideas for promoting events through TikTok and Instagram trends.",
+    "photo": "/images/team/naseeb.jpg",
+    "focus": "top"
+  },
+  {
+    "name": "Sonali Patel",
+    "role": "Director of Marketing",
+    "bio": "Sonali helps with social media promotion, Instagram posts and TikTok productions.",
+    "photo": "/images/team/sonali.jpg",
+    "focus": "top"
+  },
+  {
+    "name": "Humjit Kaur",
+    "role": "VP of Events",
+    "bio": "Humjit leads brainstorming and discussion of possible event ideas.",
+    "photo": "/images/team/humjit.jpg",
+    "focus": "top"
+  },
+  {
+    "name": "Kayla Nyugen",
+    "role": "Director of Events",
+    "bio": "Kayla gathers the resources that support running events.",
+    "photo": "/images/team/kayla.jpg",
+    "focus": "center"
+  },
+  {
+    "name": "Madison Koch",
+    "role": "VP of Communications",
+    "bio": "Madison handles emails to the Students' Union and collaboration proposals to other clubs for event planning.",
+    "photo": "/images/team/madison.jpg",
+    "focus": "top"
+  },
+  {
+    "name": "Janya Walia",
+    "role": "VP of Web Development",
+    "bio": "Janya codes, designs and updates this website for the club.",
+    "photo": "/images/team/janya.jpg",
+    "focus": "center"
+  },
+  {
+    "name": "Jacob Wahba",
+    "role": "Director of Web Development",
+    "bio": "Jacob works with the web development team to improve the LSPS website for members.",
+    "photo": "/images/team/jacob.jpg",
+    "focus": "center"
+  },
+  {
+    "name": "Kisaa Asghar",
+    "role": "Director of Web Development",
+    "bio": "Kisaa gathers and organizes the content and resources featured on the LSPS website.",
+    "photo": "/images/team/kisaa.jpg",
+    "focus": "top"
+  },
+  {
+    "name": "Anthony Corio",
+    "role": "VP of Finance",
+    "bio": "Anthony handles everything money-related, including reimbursements and receipts.",
+    "photo": "/images/team/anthony.jpg",
+    "focus": "center"
+  },
+  {
+    "name": "Kamran Warsi",
+    "role": "1st Year Rep",
+    "bio": "Kamran takes part in meetings and events and helps out when the VPs need a hand.",
+    "photo": "/images/team/kamran.jpg",
+    "focus": "center"
+  }
+]

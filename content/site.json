@@ -1,0 +1,69 @@
+{
+  "name": "Laurier STEM Publishing Society",
+  "shortName": "LSPS",
+  "tagline": "A home for STEM students who want to write, edit and publish.",
+  "intro": "We're a Waterloo-campus club for students in science, tech, engineering and math who are curious about publishing in any field. We talk through how publishing actually works, help each other with our writing goals and bring in people from the industry.",
+  "joinUrl": "https://laurierstudentsunion.presence.io/organization/laurier-stem-publishing-society-waterloo",
+  "email": "laurierstempublishingsociety@gmail.com",
+  "instagram": "https://www.instagram.com/laurierstempublishingsociety",
+  "tiktok": "https://www.tiktok.com/@lauriersps",
+  "linkedin": "https://www.linkedin.com/company/laurier-stem-publishing-society/",
+  "aboutHeading": "Why we exist",
+  "about": "Our objective is to promote a welcoming environment for students in STEM who are interested in publishing in any field, by discussing publication processes openly.\n\nWe support students through monthly discussions where members contribute to each other's publishing goals, and through editorial support from publishing companies and experienced individuals.\n\nMost importantly, we look forward to building life-long relationships with like-minded people.",
+  "aboutImage": "/images/site/reading.jpg",
+  "programs": [
+    {
+      "title": "Monthly discussion circles",
+      "description": "Bring a draft, a question or just curiosity. Each month we talk through a part of the publishing process and help each other move our own projects forward.",
+      "image": "/images/site/lab.jpg"
+    },
+    {
+      "title": "Guest speakers from the industry",
+      "description": "Editors, publishers and experienced authors share how they work, from pitching and peer review to getting a book on a shelf.",
+      "image": "/images/events/meet-the-publisher.jpg"
+    },
+    {
+      "title": "Workshops and collaborations",
+      "description": "Hands-on sessions and joint events with clubs that share our interests, so you meet people outside your own program.",
+      "image": "/images/events/journal-workshop.jpg"
+    }
+  ],
+  "joinSteps": [
+    {
+      "title": "Sign up on Presence",
+      "description": "Join LSPS on the Laurier Students' Union Presence page so you get event updates."
+    },
+    {
+      "title": "Follow us on Instagram",
+      "description": "Event announcements, recaps and reminders go up there first."
+    },
+    {
+      "title": "Come to an event",
+      "description": "No experience needed. Pick anything on the calendar and say hi to an exec."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Do I need publishing experience?",
+      "answer": "No. The club exists to talk through how publishing works, so beginners are exactly who we're for."
+    },
+    {
+      "question": "What kind of publishing do you cover?",
+      "answer": "Any field: research papers, articles, creative writing, books and more. Our members are STEM students, but your writing doesn't have to be about STEM."
+    },
+    {
+      "question": "Our club or company wants to collaborate. Who do we contact?",
+      "answer": "Email us and our communications team will get back to you."
+    }
+  ],
+  "gallery": [
+    {
+      "image": "/images/events/journal-workshop.jpg",
+      "caption": "Members showing off their handmade journals"
+    },
+    {
+      "image": "/images/events/meet-the-publisher.jpg",
+      "caption": "Meet the Publisher"
+    }
+  ]
+}

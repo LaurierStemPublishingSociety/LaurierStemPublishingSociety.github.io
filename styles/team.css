@@ -1,0 +1,70 @@
+/*
+ * Our team page.
+ * Grid of team member photos, names and bios.
+ */
+
+/* ---------- Team ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 40px 28px;
+}
+.member .photo {
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--wax-light);
+}
+.member .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.member .photo .initials {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 56px;
+  color: var(--plum);
+}
+.member h3 {
+  margin-top: 16px;
+  font-size: 21px;
+}
+.member .role {
+  color: var(--wax-text);
+  font-weight: 600;
+  font-size: 15.5px;
+  margin-top: 2px;
+}
+.member .bio {
+  color: var(--ink-soft);
+  margin-top: 8px;
+  font-size: 16px;
+}
+.member .member-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+/* Phones: two photos per row with smaller text */
+@media (max-width: 560px) {
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 14px;
+  }
+  .member h3 {
+    font-size: 18px;
+    margin-top: 12px;
+  }
+  .member .role {
+    font-size: 14px;
+  }
+  .member .bio {
+    font-size: 14.5px;
+  }
+}

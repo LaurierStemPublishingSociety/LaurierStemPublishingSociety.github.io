@@ -1,0 +1,319 @@
+/*
+ * Site chrome: top menu, envelope flap + seal, page titles, footer.
+ * These appear on every page.
+ */
+
+/* ---------- Navigation ---------- */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(244, 247, 245, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.site-nav.scrolled {
+  border-bottom-color: var(--line);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 72px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.brand img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.brand span {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 21px;
+  letter-spacing: 0.02em;
+  color: var(--plum);
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+.nav-links a:not(.btn) {
+  display: block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--ink);
+}
+.nav-links a:not(.btn):hover {
+  background: var(--wax-light);
+}
+.nav-links a[aria-current="page"] {
+  background: var(--wax-light);
+  color: var(--wax-text);
+  font-weight: 600;
+}
+.nav-links .btn {
+  margin-left: 8px;
+}
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.nav-toggle svg {
+  width: 26px;
+  height: 26px;
+}
+
+@media (max-width: 760px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+  .nav-links {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 72px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    padding: 8px var(--gutter) 20px;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    display: none;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-links a:not(.btn) {
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+  .nav-links .btn {
+    margin: 8px 0 0;
+  }
+}
+
+/* ---------- The envelope flap + seal (signature element) ---------- */
+.flap {
+  position: relative;
+  height: clamp(220px, 34vw, 400px);
+  margin-top: -1px;
+}
+.flap-shape {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background-color: var(--wax);
+  background-image:
+    linear-gradient(rgba(174, 203, 196, 0.72), rgba(174, 203, 196, 0.72)),
+    url("/images/site/atrium.jpg");
+  background-size: cover;
+  background-position: center 30%;
+  background-blend-mode: normal;
+}
+.flap-shape::after {
+  /* soft fold shadow along the flap edges */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 55%,
+    rgba(69, 53, 95, 0.14)
+  );
+}
+.flap-seal {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: clamp(120px, 16vw, 190px);
+  transform: translate(-50%, 46%);
+  filter: drop-shadow(0 10px 16px rgba(43, 33, 64, 0.22));
+  z-index: 2;
+}
+.flap-small {
+  height: clamp(130px, 16vw, 190px);
+}
+.flap-small .flap-seal {
+  width: clamp(84px, 9vw, 112px);
+}
+
+/* page-load moment: the seal presses onto the flap once */
+@media (prefers-reduced-motion: no-preference) {
+  .flap-seal.stamp {
+    animation: stamp 0.7s cubic-bezier(0.2, 0.8, 0.25, 1.1) 0.15s both;
+  }
+  @keyframes stamp {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, 30%) scale(1.35) rotate(-8deg);
+    }
+    70% {
+      opacity: 1;
+      transform: translate(-50%, 46%) scale(0.96) rotate(1deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, 46%) scale(1) rotate(0);
+    }
+  }
+}
+
+/* Page title area on inner pages */
+.page-head {
+  text-align: center;
+  padding-top: clamp(70px, 8vw, 96px);
+  padding-bottom: 40px;
+}
+.page-head h1 {
+  color: var(--plum);
+}
+.page-head p {
+  max-width: 56ch;
+  margin: 14px auto 0;
+  color: var(--ink-soft);
+  font-size: 18px;
+}
+
+/* ---------- Footer: the back of the envelope ---------- */
+.site-footer {
+  background: var(--plum-dark);
+  color: #e9e3f4;
+  margin-top: 0;
+  position: relative;
+}
+.site-footer::before {
+  /* inverted flap */
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1px;
+  height: 56px;
+  background: var(--paper);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+  padding-top: 110px;
+  padding-bottom: 40px;
+}
+.footer-brand {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.footer-brand img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+.footer-brand strong {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: #fff;
+  display: block;
+  line-height: 1.25;
+}
+.footer-brand p {
+  color: #c9bfdc;
+  margin-top: 6px;
+  font-size: 15.5px;
+}
+.site-footer h2 {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--wax);
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #e9e3f4;
+}
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+.socials a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+.socials a:hover {
+  background: var(--wax);
+  color: var(--plum-dark);
+}
+.socials svg {
+  width: 20px;
+  height: 20px;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 28px;
+  font-size: 14px;
+  color: #b3a8c9;
+}
+.footer-bottom a {
+  color: #b3a8c9;
+}
+.site-footer :focus-visible {
+  outline-color: var(--wax);
+}
+@media (max-width: 860px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 460px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
