@@ -2,19 +2,19 @@
   {
     "name": "Vishwa Lad",
     "role": "President",
-    "photo": "/images/team/vishwa.jpg",
+    "photo": "/images/team/Vishwa Lad.jpeg",
     "focus": "center"
   },
   {
     "name": "Kamran Warsi",
     "role": "Vice President",
-    "photo": "/images/team/kamran.jpg",
+    "photo": "/images/team/Kamran Warsi.jpeg",
     "focus": "center"
   },
   {
     "name": "Naseeb Rai",
     "role": "VP of Marketing",
-    "photo": "/images/team/naseeb.jpg",
+    "photo": "/images/team/Naseeb Rai.jpg",
     "focus": "top"
   },
   {
@@ -23,52 +23,57 @@
   },
   {
     "name": "Karum Aujla",
-    "role": "Director of Marketing"
+    "role": "Director of Marketing",
+    "photo": "/images/team/Karum Aujla.jpeg"
   },
   {
     "name": "Humjit Kaur-Azad",
     "role": "VP of Events",
-    "photo": "/images/team/humjit.jpg",
+    "photo": "/images/team/Humjit kaur-azad.jpeg",
     "focus": "top"
   },
   {
     "name": "Janica Van Alstine",
-    "role": "Director of Events"
+    "role": "Director of Events",
+    "photo": "/images/team/Janica Van Alstine.jpeg"
   },
   {
     "name": "Jackson MacKay",
-    "role": "Director of Events"
+    "role": "Director of Events",
+    "photo": "/images/team/Jackson MacKay.jpeg"
   },
   {
     "name": "Madison Koch",
     "role": "VP of Communications",
-    "photo": "/images/team/madison.jpg",
+    "photo": "/images/team/Madison Koch.jpeg",
     "focus": "top"
   },
   {
     "name": "Jacob Wahba",
     "role": "VP of Research Communications",
-    "photo": "/images/team/jacob.jpg",
+    "photo": "/images/team/Jacob Wahba.jpeg",
     "focus": "center"
   },
   {
     "name": "Janya Walia",
     "role": "VP of Web Development",
-    "photo": "/images/team/janya.jpg",
+    "photo": "/images/team/Janya Walia.JPG",
     "focus": "center"
   },
   {
     "name": "Richard Francis",
-    "role": "Director of Web Development"
+    "role": "Director of Web Development",
+    "photo": "/images/team/Richard Francis.jpeg"
   },
   {
     "name": "Anthony Corio",
     "role": "VP of Finance",
-    "photo": "/images/team/anthony.jpg",
+    "photo": "/images/team/A Corio.jpeg",
     "focus": "center"
   },
   {
     "name": "Eden Gladstone",
-    "role": "First Year Rep"
+    "role": "First Year Rep",
+    "photo": "/images/team/Eden Gladstone.jpeg"
   }
 ]
