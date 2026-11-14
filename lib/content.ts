@@ -8,7 +8,7 @@
 import siteJson from "@/content/site.json";
 import eventsJson from "@/content/events.json";
 import teamJson from "@/content/team.json";
-import type { ClubEvent, SiteSettings, TeamMember } from "./types";
+import type { ClubEvent, SiteSettings, TeamYear } from "./types";
 
 export const site = siteJson as SiteSettings;
 
@@ -17,7 +17,15 @@ export const events = (eventsJson as ClubEvent[]).filter(
   (event) => event && event.title && event.start && !event.hidden,
 );
 
-/** Team members that aren't hidden, in the order they appear in the file */
-export const team = (teamJson as TeamMember[]).filter(
-  (member) => member && member.name && !member.hidden,
-);
+/**
+ * Team for each year that isn't hidden, in the order they appear in the file
+ * (put the newest year first). Hidden members are left out.
+ */
+export const teamYears = (teamJson as TeamYear[])
+  .filter((year) => year && year.year && !year.hidden)
+  .map((year) => ({
+    ...year,
+    members: (year.members ?? []).filter(
+      (member) => member && member.name && !member.hidden,
+    ),
+  }));

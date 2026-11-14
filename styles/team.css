@@ -3,6 +3,40 @@
  * Grid of team member photos, names and bios.
  */
 
+/* ---------- Year list ---------- */
+.team-years {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.team-years button {
+  font: inherit;
+  font-weight: 600;
+  font-size: 15.5px;
+  padding: 8px 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--plum);
+  cursor: pointer;
+}
+.team-years button:hover {
+  border-color: var(--plum);
+}
+.team-years button[aria-pressed="true"] {
+  background: var(--plum);
+  border-color: var(--plum);
+  color: var(--surface);
+}
+.team-years button:focus-visible {
+  outline: 2px solid var(--plum);
+  outline-offset: 2px;
+}
+.team-year-title {
+  margin: 28px 0 24px;
+  font-size: 26px;
+}
+
 /* ---------- Team ---------- */
 .team-grid {
   display: grid;

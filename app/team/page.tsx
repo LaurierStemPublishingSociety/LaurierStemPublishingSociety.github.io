@@ -1,11 +1,12 @@
 /**
  * Our team page.
- * Team members come from content/team.json. Edit that file to add or change people.
+ * Each year's team comes from content/team.json. Edit that file to add or change people,
+ * or add a new year at the top.
  */
 import type { Metadata } from "next";
 import EnvelopeFlap from "@/components/EnvelopeFlap";
-import TeamMemberCard from "@/components/TeamMemberCard";
-import { team } from "@/lib/content";
+import TeamYears from "@/components/TeamYears";
+import { teamYears } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Our team",
@@ -23,15 +24,7 @@ export default function TeamPage() {
       </header>
 
       <section className="wrap page-body">
-        {team.length > 0 ? (
-          <div className="team-grid">
-            {team.map((member) => (
-              <TeamMemberCard key={member.name} member={member} />
-            ))}
-          </div>
-        ) : (
-          <p className="empty">Team members will appear here soon.</p>
-        )}
+        <TeamYears years={teamYears} />
       </section>
     </>
   );

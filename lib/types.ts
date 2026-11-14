@@ -40,7 +40,15 @@ export type ClubEvent = {
   hidden?: boolean;
 };
 
-/** One entry in content/team.json */
+/** One year's team in content/team.json */
+export type TeamYear = {
+  /** Shown in the year list, e.g. "2026–27" */
+  year: string;
+  members: TeamMember[];
+  hidden?: boolean;
+};
+
+/** One person in a year's "members" list */
 export type TeamMember = {
   name: string;
   role?: string;

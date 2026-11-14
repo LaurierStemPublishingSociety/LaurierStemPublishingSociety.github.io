@@ -1,80 +1,174 @@
 [
   {
-    "name": "Vishwa Lad",
-    "role": "President",
-    "photo": "/images/team/Vishwa Lad.jpeg",
-    "focus": "center"
+    "year": "2026–27",
+    "members": [
+      {
+        "name": "Vishwa Lad",
+        "role": "President",
+        "photo": "/images/team/Vishwa Lad.jpeg",
+        "focus": "center"
+      },
+      {
+        "name": "Kamran Warsi",
+        "role": "Vice President",
+        "photo": "/images/team/Kamran Warsi.jpeg",
+        "focus": "center"
+      },
+      {
+        "name": "Naseeb Rai",
+        "role": "VP of Marketing",
+        "photo": "/images/team/Naseeb Rai.jpg",
+        "focus": "top"
+      },
+      {
+        "name": "Keeva Clarke",
+        "role": "Director of Marketing",
+        "photo": "/images/team/Keeva C.jpeg"
+      },
+      {
+        "name": "Karum Aujla",
+        "role": "Director of Marketing",
+        "photo": "/images/team/Karum Aujla.jpeg"
+      },
+      {
+        "name": "Humjit Kaur-Azad",
+        "role": "VP of Events",
+        "photo": "/images/team/Humjit kaur-azad.jpeg",
+        "focus": "top"
+      },
+      {
+        "name": "Janica Van Alstine",
+        "role": "Director of Events",
+        "photo": "/images/team/Janica Van Alstine.jpeg"
+      },
+      {
+        "name": "Jackson MacKay",
+        "role": "Director of Events",
+        "photo": "/images/team/Jackson MacKay.jpeg"
+      },
+      {
+        "name": "Madison Koch",
+        "role": "VP of Communications",
+        "photo": "/images/team/Madison Koch.jpeg",
+        "focus": "top"
+      },
+      {
+        "name": "Jacob Wahba",
+        "role": "VP of Research Communications",
+        "photo": "/images/team/Jacob Wahba.jpeg",
+        "focus": "center"
+      },
+      {
+        "name": "Janya Walia",
+        "role": "VP of Web Development",
+        "photo": "/images/team/Janya Walia.JPG",
+        "focus": "center"
+      },
+      {
+        "name": "Richard Francis",
+        "role": "Director of Web Development",
+        "photo": "/images/team/Richard Francis.jpeg"
+      },
+      {
+        "name": "Anthony Corio",
+        "role": "VP of Finance",
+        "photo": "/images/team/A Corio.jpeg",
+        "focus": "center"
+      },
+      {
+        "name": "Eden Gladstone",
+        "role": "First Year Rep",
+        "photo": "/images/team/Eden Gladstone.jpeg"
+      }
+    ]
   },
   {
-    "name": "Kamran Warsi",
-    "role": "Vice President",
-    "photo": "/images/team/Kamran Warsi.jpeg",
-    "focus": "center"
-  },
-  {
-    "name": "Naseeb Rai",
-    "role": "VP of Marketing",
-    "photo": "/images/team/Naseeb Rai.jpg",
-    "focus": "top"
-  },
-  {
-    "name": "Keeva Clarke",
-    "role": "Director of Marketing",
-    "photo": "/images/team/Keeva C.jpeg"
-  },
-  {
-    "name": "Karum Aujla",
-    "role": "Director of Marketing",
-    "photo": "/images/team/Karum Aujla.jpeg"
-  },
-  {
-    "name": "Humjit Kaur-Azad",
-    "role": "VP of Events",
-    "photo": "/images/team/Humjit kaur-azad.jpeg",
-    "focus": "top"
-  },
-  {
-    "name": "Janica Van Alstine",
-    "role": "Director of Events",
-    "photo": "/images/team/Janica Van Alstine.jpeg"
-  },
-  {
-    "name": "Jackson MacKay",
-    "role": "Director of Events",
-    "photo": "/images/team/Jackson MacKay.jpeg"
-  },
-  {
-    "name": "Madison Koch",
-    "role": "VP of Communications",
-    "photo": "/images/team/Madison Koch.jpeg",
-    "focus": "top"
-  },
-  {
-    "name": "Jacob Wahba",
-    "role": "VP of Research Communications",
-    "photo": "/images/team/Jacob Wahba.jpeg",
-    "focus": "center"
-  },
-  {
-    "name": "Janya Walia",
-    "role": "VP of Web Development",
-    "photo": "/images/team/Janya Walia.JPG",
-    "focus": "center"
-  },
-  {
-    "name": "Richard Francis",
-    "role": "Director of Web Development",
-    "photo": "/images/team/Richard Francis.jpeg"
-  },
-  {
-    "name": "Anthony Corio",
-    "role": "VP of Finance",
-    "photo": "/images/team/A Corio.jpeg",
-    "focus": "center"
-  },
-  {
-    "name": "Eden Gladstone",
-    "role": "First Year Rep",
-    "photo": "/images/team/Eden Gladstone.jpeg"
+    "year": "2025–26",
+    "members": [
+      {
+        "name": "Niti Gandhi",
+        "role": "President",
+        "bio": "Niti monitors the goals of the club and runs club meetings. She also works closely with the events executives to plan events.",
+        "photo": "/images/team/2025-26/niti.jpg",
+        "focus": "top"
+      },
+      {
+        "name": "Vishwa Lad",
+        "role": "VP of Marketing",
+        "bio": "Vishwa works closely with the social media team to execute ideas on social media and supports them when needed.",
+        "photo": "/images/team/2025-26/vishwa.jpg",
+        "focus": "center"
+      },
+      {
+        "name": "Naseeb Rai",
+        "role": "VP of Marketing",
+        "bio": "Naseeb works with the events team on ideas for promoting events through TikTok and Instagram trends.",
+        "photo": "/images/team/2025-26/naseeb.jpg",
+        "focus": "top"
+      },
+      {
+        "name": "Sonali Patel",
+        "role": "Director of Marketing",
+        "bio": "Sonali helps with social media promotion, Instagram posts and TikTok productions.",
+        "photo": "/images/team/2025-26/sonali.jpg",
+        "focus": "top"
+      },
+      {
+        "name": "Humjit Kaur",
+        "role": "VP of Events",
+        "bio": "Humjit leads brainstorming and discussion of possible event ideas.",
+        "photo": "/images/team/2025-26/humjit.jpg",
+        "focus": "top"
+      },
+      {
+        "name": "Kayla Nyugen",
+        "role": "Director of Events",
+        "bio": "Kayla gathers the resources that support running events.",
+        "photo": "/images/team/2025-26/kayla.jpg",
+        "focus": "center"
+      },
+      {
+        "name": "Madison Koch",
+        "role": "VP of Communications",
+        "bio": "Madison handles emails to the Students' Union and collaboration proposals to other clubs for event planning.",
+        "photo": "/images/team/2025-26/madison.jpg",
+        "focus": "top"
+      },
+      {
+        "name": "Janya Walia",
+        "role": "VP of Web Development",
+        "bio": "Janya codes, designs and updates this website for the club.",
+        "photo": "/images/team/2025-26/janya.jpg",
+        "focus": "center"
+      },
+      {
+        "name": "Jacob Wahba",
+        "role": "Director of Web Development",
+        "bio": "Jacob works with the web development team to improve the LSPS website for members.",
+        "photo": "/images/team/2025-26/jacob.jpg",
+        "focus": "center"
+      },
+      {
+        "name": "Kisaa Asghar",
+        "role": "Director of Web Development",
+        "bio": "Kisaa gathers and organizes the content and resources featured on the LSPS website.",
+        "photo": "/images/team/2025-26/kisaa.jpg",
+        "focus": "top"
+      },
+      {
+        "name": "Anthony Corio",
+        "role": "VP of Finance",
+        "bio": "Anthony handles everything money-related, including reimbursements and receipts.",
+        "photo": "/images/team/2025-26/anthony.jpg",
+        "focus": "center"
+      },
+      {
+        "name": "Kamran Warsi",
+        "role": "1st Year Rep",
+        "bio": "Kamran takes part in meetings and events and helps out when the VPs need a hand.",
+        "photo": "/images/team/2025-26/kamran.jpg",
+        "focus": "center"
+      }
+    ]
   }
 ]
