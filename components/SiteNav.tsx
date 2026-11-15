@@ -19,22 +19,15 @@ const links = [
 export default function SiteNav({ joinUrl }: { joinUrl?: string }) {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [floating, setFloating] = useState(false);
 
-  // Once the page is scrolled, show a thin line under the bar. Once the page's
-  // title area (the first <header> in <main>) has scrolled up behind the
-  // 72px bar, turn the bar into a floating pill.
+  // Turn the bar into a floating pill as soon as the page is scrolled
   useEffect(() => {
-    const pageHead = document.querySelector("main > header");
-    const onScroll = () => {
-      setScrolled(window.scrollY > 8);
-      setFloating(!!pageHead && pageHead.getBoundingClientRect().bottom < 72);
-    };
+    const onScroll = () => setFloating(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [pathname]);
+  }, []);
 
   // Close the phone menu after moving to another page
   useEffect(() => setMenuOpen(false), [pathname]);
@@ -45,10 +38,7 @@ export default function SiteNav({ joinUrl }: { joinUrl?: string }) {
       : !href.includes("#") && pathname.startsWith(href);
 
   return (
-    <nav
-      className={`site-nav${scrolled ? " scrolled" : ""}${floating ? " floating" : ""}`}
-      aria-label="Main"
-    >
+    <nav className={`site-nav${floating ? " floating" : ""}`} aria-label="Main">
       <div className="wrap nav-inner">
         <Link className="brand" href="/">
           <img src="/images/site/seal.png" alt="" />

@@ -8,14 +8,10 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  display: flow-root; /* keeps the floating pill's 8px gap inside the bar */
   background: rgba(244, 247, 245, 0.92);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s;
-}
-.site-nav.scrolled {
-  border-bottom-color: var(--line);
 }
 .nav-inner {
   display: flex;
@@ -32,13 +28,12 @@
     border-radius 0.3s ease;
 }
 
-/* Past the page title: the bar lifts off into a floating pill.
+/* Once the page is scrolled: the bar lifts off into a floating pill.
    The nav stays 72px tall (8px gap + 56px pill + 8px), so the page doesn't jump. */
 .site-nav.floating {
   background: transparent;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  border-bottom-color: transparent;
   pointer-events: none; /* the clear strip around the pill lets clicks through */
 }
 .site-nav.floating .nav-inner {
