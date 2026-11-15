@@ -7,6 +7,7 @@
         "role": "President",
         "yearOfStudy": 4,
         "program": "Health Sciences",
+        "funFact": "Wood frogs can freeze solid during the winter and seemingly come back to life when they thaw in the spring!",
         "photo": "/images/team/Vishwa Lad.jpeg",
         "focus": "center"
       },
@@ -15,6 +16,7 @@
         "role": "Vice President",
         "yearOfStudy": 2,
         "program": "Health Sciences",
+        "funFact": "Your heart beats around 3 billion times in a lifetime!",
         "photo": "/images/team/Kamran Warsi.jpeg",
         "focus": "center"
       },
@@ -23,6 +25,7 @@
         "role": "VP of Marketing",
         "yearOfStudy": 4,
         "program": "Health Sciences",
+        "funFact": "Bananas are radioactive.",
         "photo": "/images/team/Naseeb Rai.jpg",
         "focus": "top"
       },
@@ -31,6 +34,7 @@
         "role": "Director of Marketing",
         "yearOfStudy": 3,
         "program": "Health Sciences",
+        "funFact": "Out of 206 bones, 106 of them are in your hands and feet!!",
         "photo": "/images/team/Keeva C.jpeg"
       },
       {
@@ -38,6 +42,7 @@
         "role": "Director of Marketing",
         "yearOfStudy": 2,
         "program": "Health Sciences",
+        "funFact": "There are more trees on our planet than stars in our galaxy.",
         "photo": "/images/team/Karum Aujla.jpeg"
       },
       {
@@ -45,6 +50,7 @@
         "role": "VP of Events",
         "yearOfStudy": 4,
         "program": "Health Sciences",
+        "funFact": "Lightning is five times hotter than the surface of the sun!",
         "photo": "/images/team/Humjit kaur-azad.jpeg",
         "focus": "top"
       },
@@ -53,6 +59,7 @@
         "role": "Director of Events",
         "yearOfStudy": 1,
         "program": "Health Sciences",
+        "funFact": "The moon also experiences seismic activity known as “moonquakes” as a result of the moon’s crust shrinking and wrinkling, rather than tectonic plates.",
         "photo": "/images/team/Janica Van Alstine.jpeg"
       },
       {
@@ -60,6 +67,7 @@
         "role": "Director of Events",
         "yearOfStudy": 2,
         "program": "Health Sciences",
+        "funFact": "Steel is more elastic than rubber.",
         "photo": "/images/team/Jackson MacKay.jpeg"
       },
       {
@@ -67,6 +75,7 @@
         "role": "VP of Communications",
         "yearOfStudy": 4,
         "program": "Health Sciences",
+        "funFact": "The average person walks three times around the sun in their lifetime!",
         "photo": "/images/team/Madison Koch.jpeg",
         "focus": "top"
       },
@@ -75,6 +84,7 @@
         "role": "VP of Research Communications",
         "yearOfStudy": 4,
         "program": "Health Sciences",
+        "funFact": "Did you know butterflies have taste receptors on their feet, allowing them to taste plants by landing on them?",
         "photo": "/images/team/Jacob Wahba.jpeg",
         "focus": "center"
       },
@@ -83,6 +93,7 @@
         "role": "VP of Web Development",
         "yearOfStudy": 4,
         "program": "Computer Science, UX minor",
+        "funFact": "The world’s first programmer was a woman named Ada Lovelace #WomeninSTEM :)",
         "photo": "/images/team/Janya Walia.JPG",
         "focus": "center"
       },
@@ -91,6 +102,7 @@
         "role": "Director of Web Development",
         "yearOfStudy": 4,
         "program": "Computer Science",
+        "funFact": "Wombats poop cubes.",
         "photo": "/images/team/Richard Francis.jpeg"
       },
       {
@@ -98,6 +110,7 @@
         "role": "VP of Finance",
         "yearOfStudy": 4,
         "program": "BBA, Accounting",
+        "funFact": "Geckos can drop their tails when scared and their tail will continue to wiggle to scare predators off.",
         "photo": "/images/team/A Corio.jpeg",
         "focus": "center"
       },
@@ -106,6 +119,7 @@
         "role": "First Year Rep",
         "yearOfStudy": 1,
         "program": "Health Sciences",
+        "funFact": "Did you know that your brain shrinks every night while you sleep??",
         "photo": "/images/team/Eden Gladstone.jpeg"
       }
     ]

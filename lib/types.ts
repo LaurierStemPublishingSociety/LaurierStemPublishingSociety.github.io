@@ -52,6 +52,11 @@ export type TeamYear = {
 export type TeamMember = {
   name: string;
   role?: string;
+  /** 1 = first year, 2 = second year, … */
+  yearOfStudy?: number;
+  program?: string;
+  /** Shown over their photo when the lightbulb button is tapped */
+  funFact?: string;
   bio?: string;
   photo?: string;
   /** Which part of the photo to keep when it's cropped */

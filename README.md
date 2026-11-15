@@ -68,6 +68,9 @@ The file is a list of years, newest first. Each year has its own team:
       {
         "name": "Full Name",
         "role": "VP of Events",
+        "yearOfStudy": 2,
+        "program": "Health Sciences",
+        "funFact": "Wombats poop cubes.",
         "photo": "/images/team/Full Name.jpeg",
         "focus": "top"
       }
@@ -85,7 +88,9 @@ The team page shows a button for each year. The first year in the file is shown 
 **Add a team member:** copy someone in the right year's `members` list, paste it after them (with a comma between the two) and change the values.
 
 - People appear in the order they're listed: President, Vice President, then each team (VP first, then directors), then First Year Rep.
-- `name` is required. `role`, `bio`, `photo`, `focus` and `linkedin` are optional. The current team has no bios.
+- `name` is required. `role`, `yearOfStudy`, `program`, `funFact`, `bio`, `photo`, `focus` and `linkedin` are optional. The current team has no bios.
+- `funFact` adds a lightbulb button to the corner of their photo. Tapping it shows the fact over the photo, and tapping again (or tapping the fact) hides it. Keep facts to about 160 characters or fewer so they fit on phones.
+- `yearOfStudy` is a plain number (`1`, `2`, `3`, `4` …) and shows as "2nd year · Health Sciences" under their role. Remember to bump everyone's year when you copy people into a new year's team.
 - `focus` sets which part of the photo is kept when it's cropped: `"top"`, `"center"` (the default) or `"bottom"`.
 - With no photo, their initials are shown instead.
 - `"hidden": true` keeps a person (or a whole year) in the file without showing it.
