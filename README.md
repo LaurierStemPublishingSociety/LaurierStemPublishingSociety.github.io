@@ -8,21 +8,22 @@ It's built with [Next.js](https://nextjs.org) and hosted for free on GitHub Page
 
 ## Where do I change…?
 
-| I want to change…                             | Edit this                                             |
-| --------------------------------------------- | ----------------------------------------------------- |
-| Events                                        | `content/events.json`                                 |
-| Team members (each year's team)               | `content/team.json`                                   |
-| Home page text, FAQ, links, email             | `content/site.json`                                   |
-| Colours or fonts                              | `styles/tokens.css`                                   |
-| The top menu (add/remove a link)              | `components/SiteNav.tsx` (the `links` list)           |
-| The footer                                    | `components/SiteFooter.tsx`                           |
-| Layout of the home page sections              | `app/page.tsx` + `styles/home.css`                    |
-| How the calendar works                        | `components/EventsCalendar.tsx` + `styles/events.css` |
-| How a single event looks                      | `components/EventCard.tsx`                            |
-| How a team member looks                       | `components/TeamMemberCard.tsx` + `styles/team.css`   |
-| The year buttons on the team page             | `components/TeamYears.tsx` + `styles/team.css`        |
-| Photos and the logo                           | `public/images/`                                      |
-| What fields the content files can have        | `lib/types.ts`                                        |
+| I want to change…                           | Edit this                                             |
+| ------------------------------------------- | ----------------------------------------------------- |
+| Events                                      | `content/events.json`                                 |
+| Team members (each year's team)             | `content/team.json`                                   |
+| Home page text, FAQ, links, email           | `content/site.json`                                   |
+| Colours or fonts                            | `styles/tokens.css`                                   |
+| The top menu (add/remove a link)            | `components/SiteNav.tsx` (the `links` list)           |
+| The footer                                  | `components/SiteFooter.tsx`                           |
+| Layout of the home page sections            | `app/page.tsx` + `styles/home.css`                    |
+| The envelope-opening intro on the home page | `components/EnvelopeIntro.tsx` + `styles/home.css`    |
+| How the calendar works                      | `components/EventsCalendar.tsx` + `styles/events.css` |
+| How a single event looks                    | `components/EventCard.tsx`                            |
+| How a team member looks                     | `components/TeamMemberCard.tsx` + `styles/team.css`   |
+| The year buttons on the team page           | `components/TeamYears.tsx` + `styles/team.css`        |
+| Photos and the logo                         | `public/images/`                                      |
+| What fields the content files can have      | `lib/types.ts`                                        |
 
 ---
 
@@ -119,6 +120,7 @@ components/             Reusable pieces of the pages
   SiteNav.tsx           Top menu
   SiteFooter.tsx        Footer
   EnvelopeFlap.tsx      Mint envelope flap + wax seal at the top of pages
+  EnvelopeIntro.tsx     Envelope-opening intro on the home page (add ?intro to the address to replay it)
   NextEventCard.tsx     "Next event" card on the home page
   EventsCalendar.tsx    Month calendar + event list
   EventCard.tsx         One event (with RSVP / add-to-calendar buttons)

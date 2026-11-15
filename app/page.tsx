@@ -4,6 +4,7 @@
  */
 import Link from "next/link";
 import EnvelopeFlap from "@/components/EnvelopeFlap";
+import EnvelopeIntro from "@/components/EnvelopeIntro";
 import NextEventCard from "@/components/NextEventCard";
 import { events, site } from "@/lib/content";
 import { imageSrc, toParagraphs } from "@/lib/text";
@@ -13,6 +14,7 @@ export default function HomePage() {
 
   return (
     <>
+      <EnvelopeIntro />
       <EnvelopeFlap size="large" />
 
       {/* ---------- Hero ---------- */}

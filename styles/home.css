@@ -284,3 +284,346 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- Envelope intro ---------- */
+/* Plays once when the home page opens (components/EnvelopeIntro.tsx):
+     0.0s  envelope rises in, the wax seal is stamped on
+     0.9s  the seal shakes and cracks in two
+     1.1s  the flap swings open
+     1.55s the letter slides out…
+     2.2s  …and zooms to fill the screen, becoming the page
+     2.6s  the intro fades away and the hero settles in underneath */
+.envelope-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    #4b3a68,
+    var(--plum-dark) 70%
+  );
+  cursor: pointer;
+  touch-action: none;
+  animation: intro-out 0.4s ease 2.6s forwards;
+}
+.envelope-intro[hidden] {
+  display: none;
+}
+@keyframes intro-out {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* The envelope sits a little below centre so the letter has room to come out */
+.env {
+  --w: min(520px, 84vw, 62vh);
+  position: relative;
+  top: 12vh;
+  width: var(--w);
+  height: calc(var(--w) * 0.64);
+  animation: env-in 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+}
+.env > * {
+  position: absolute;
+}
+@keyframes env-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.94);
+  }
+}
+
+/* Stacking, back to front: inside of the envelope (1), flap once open (2),
+   letter (3), front pocket (4), flap while closed (5), seal (6) */
+.env-back {
+  inset: 0;
+  z-index: 1;
+  border-radius: 6px;
+  background: linear-gradient(#b4cbc4, #c9dcd6 45%);
+  box-shadow: 0 40px 70px -20px rgba(0, 0, 0, 0.55);
+}
+.env-front {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+.env-fold-side {
+  fill: #eaf0ee;
+}
+.env-fold-bottom {
+  fill: #fbfcfb;
+  stroke: rgba(69, 53, 95, 0.14);
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+}
+
+/* Flap: hinged on its top edge, swings towards you and over */
+.env-flap {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60.94%;
+  z-index: 5;
+  overflow: visible;
+  transform-origin: 50% 0;
+  filter: drop-shadow(0 3px 5px rgba(43, 33, 64, 0.22));
+  will-change: transform;
+  animation: flap-open 0.7s cubic-bezier(0.45, 0, 0.55, 1) 1.1s forwards;
+}
+.env-flap-inside {
+  fill: #e3ede9;
+  opacity: 0;
+  animation: flap-inside 0.7s linear 1.1s forwards;
+}
+@keyframes flap-open {
+  0% {
+    transform: perspective(1100px) rotateX(0deg);
+    z-index: 5;
+  }
+  49.9% {
+    z-index: 5;
+  }
+  /* edge-on at the halfway point: drop behind the letter */
+  50% {
+    z-index: 2;
+  }
+  100% {
+    transform: perspective(1100px) rotateX(180deg);
+    z-index: 2;
+  }
+}
+@keyframes flap-inside {
+  0%,
+  50% {
+    opacity: 0;
+  }
+  50.01%,
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Wax seal: stamped on, then cracks down the middle and falls away */
+.env-seal {
+  left: 50%;
+  top: 59%;
+  width: 26%;
+  aspect-ratio: 307 / 319;
+  z-index: 6;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.35));
+  animation:
+    seal-stamp 0.55s cubic-bezier(0.2, 0.8, 0.25, 1.1) 0.3s backwards,
+    seal-shake 0.22s ease-in-out 0.88s;
+}
+.env-seal img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.env-seal-left {
+  clip-path: polygon(
+    0 0,
+    53% 0,
+    46% 18%,
+    55% 36%,
+    45% 55%,
+    54% 74%,
+    48% 100%,
+    0 100%
+  );
+  animation: seal-left 0.55s cubic-bezier(0.5, 0, 0.85, 0.45) 1.02s forwards;
+}
+.env-seal-right {
+  clip-path: polygon(
+    53% 0,
+    100% 0,
+    100% 100%,
+    48% 100%,
+    54% 74%,
+    45% 55%,
+    55% 36%,
+    46% 18%
+  );
+  animation: seal-right 0.55s cubic-bezier(0.5, 0, 0.85, 0.45) 1.02s forwards;
+}
+@keyframes seal-stamp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -64%) scale(1.5) rotate(-10deg);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.95) rotate(1deg);
+  }
+}
+@keyframes seal-shake {
+  30% {
+    transform: translate(-50%, -50%) rotate(-6deg) scale(1.05);
+  }
+  70% {
+    transform: translate(-50%, -50%) rotate(5deg) scale(1.05);
+  }
+}
+@keyframes seal-left {
+  25% {
+    transform: translate(-7%, 1%) rotate(-7deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-30%, 150%) rotate(-40deg);
+    opacity: 0;
+  }
+}
+@keyframes seal-right {
+  25% {
+    transform: translate(7%, 1%) rotate(7deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(30%, 150%) rotate(40deg);
+    opacity: 0;
+  }
+}
+
+/* Letter: slides up out of the pocket, then grows until it is the page */
+.env-letter {
+  left: 5%;
+  right: 5%;
+  top: 5%;
+  height: 90%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--w) * 0.035);
+  padding: 9% 9% 0;
+  border-radius: 5px;
+  background: var(--paper);
+  box-shadow: 0 1px 6px rgba(43, 33, 64, 0.18);
+  will-change: transform;
+  animation: letter-out 1.1s linear 1.55s forwards;
+}
+.env-letter span {
+  height: calc(var(--w) * 0.016);
+  border-radius: 99px;
+  background: var(--line);
+  animation: env-fade 0.15s linear 2.05s forwards;
+}
+.env-letter span:nth-child(1) {
+  width: 46%;
+  height: calc(var(--w) * 0.024);
+  background: var(--plum);
+}
+.env-letter span:nth-child(3) {
+  width: 92%;
+}
+.env-letter span:nth-child(4) {
+  width: 64%;
+}
+@keyframes letter-out {
+  0% {
+    transform: translateY(0) scale(1);
+    z-index: 3;
+    animation-timing-function: cubic-bezier(0.25, 0.8, 0.3, 1);
+  }
+  /* fully clear of the pocket: hold a beat, then come to the front */
+  50% {
+    transform: translateY(-108%) scale(1);
+    z-index: 3;
+    animation-timing-function: linear;
+  }
+  56% {
+    transform: translateY(-108%) scale(1);
+    z-index: 10;
+    animation-timing-function: cubic-bezier(0.7, 0, 0.85, 0.4);
+  }
+  100% {
+    transform: translateY(-108%) scale(14);
+    z-index: 10;
+  }
+}
+
+.env-skip {
+  position: absolute;
+  left: 50%;
+  bottom: max(24px, 5vh);
+  transform: translateX(-50%);
+  padding: 10px 18px;
+  border: 0;
+  background: none;
+  color: rgba(255, 255, 255, 0.6);
+  font: inherit;
+  font-size: 13.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  animation:
+    env-fade-in 0.4s ease 0.7s backwards,
+    env-fade 0.2s linear 2.1s forwards;
+}
+.env-skip:hover {
+  color: #fff;
+}
+.env-skip:focus-visible {
+  outline: 2px solid var(--wax);
+  outline-offset: 2px;
+}
+@keyframes env-fade {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes env-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/* As the intro clears, the page underneath settles in: the flap folds down,
+   the seal is stamped, and the hero text rises into place. */
+@media (prefers-reduced-motion: no-preference) {
+  .envelope-intro:not([hidden]) ~ .flap .flap-shape {
+    transform-origin: 50% 0;
+    animation: flap-fold 0.65s cubic-bezier(0.2, 0.8, 0.2, 1) 2.6s backwards;
+  }
+  .envelope-intro:not([hidden]) ~ .flap .flap-seal.stamp {
+    animation-delay: 3s;
+  }
+  .envelope-intro:not([hidden]) ~ .hero > * {
+    animation: hero-rise 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 2.75s backwards;
+  }
+  .envelope-intro:not([hidden]) ~ .hero > :nth-child(2) {
+    animation-delay: 2.85s;
+  }
+  .envelope-intro:not([hidden]) ~ .hero > :nth-child(3) {
+    animation-delay: 2.95s;
+  }
+  .envelope-intro:not([hidden]) ~ .hero > :nth-child(4) {
+    animation-delay: 3.05s;
+  }
+  @keyframes flap-fold {
+    from {
+      transform: scaleY(0);
+    }
+  }
+  @keyframes hero-rise {
+    from {
+      opacity: 0;
+      transform: translateY(22px);
+    }
+  }
+}
+
+/* Reduced motion: no intro at all */
+@media (prefers-reduced-motion: reduce) {
+  .envelope-intro {
+    display: none;
+  }
+}
