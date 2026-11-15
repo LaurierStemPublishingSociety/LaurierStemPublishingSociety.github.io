@@ -23,6 +23,47 @@
   justify-content: space-between;
   gap: 16px;
   height: 72px;
+  transition:
+    height 0.3s ease,
+    margin 0.3s ease,
+    padding 0.3s ease,
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    border-radius 0.3s ease;
+}
+
+/* Past the page title: the bar lifts off into a floating pill.
+   The nav stays 72px tall (8px gap + 56px pill + 8px), so the page doesn't jump. */
+.site-nav.floating {
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom-color: transparent;
+  pointer-events: none; /* the clear strip around the pill lets clicks through */
+}
+.site-nav.floating .nav-inner {
+  pointer-events: auto;
+  height: 56px;
+  width: calc(100% - 24px);
+  max-width: calc(var(--max) - 2 * var(--gutter));
+  margin: 8px auto;
+  padding: 0 8px 0 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 0 1px var(--line),
+    0 8px 24px rgba(43, 33, 64, 0.12);
+}
+.site-nav.floating .brand img {
+  width: 34px;
+  height: 34px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-inner {
+    transition: none;
+  }
 }
 .brand {
   display: flex;
@@ -102,6 +143,19 @@
   }
   .nav-links.open {
     display: flex;
+  }
+  /* Phone menu opens as a matching floating card under the pill */
+  .site-nav.floating .nav-links {
+    left: 12px;
+    right: 12px;
+    top: 70px;
+    padding: 8px;
+    border: 0;
+    border-radius: 18px;
+    background: var(--surface);
+    box-shadow:
+      0 0 0 1px var(--line),
+      0 12px 28px rgba(43, 33, 64, 0.16);
   }
   .nav-links a:not(.btn) {
     padding: 12px 14px;
