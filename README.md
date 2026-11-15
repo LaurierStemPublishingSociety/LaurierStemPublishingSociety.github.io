@@ -1,8 +1,6 @@
 # Laurier STEM Publishing Society website
 
-The club website, live at **https://laurierstempublishingsociety.github.io**.
-
-It's built with [Next.js](https://nextjs.org) and hosted for free on GitHub Pages.
+The club website. It's built with [Next.js](https://nextjs.org) and hosted on [Vercel](https://vercel.com).
 
 ---
 
@@ -31,7 +29,7 @@ It's built with [Next.js](https://nextjs.org) and hosted for free on GitHub Page
 
 All of the site's text, events and team members are in the three JSON files in `content/`. You can edit them right on GitHub: open the file, click the ✏️ pencil, make your change and press **Commit changes**. The site updates within about 2 minutes.
 
-JSON is picky. Keep the quotes and commas exactly as in the entries around your change. If the site doesn't update, check the repo's **Actions** tab. A red ❌ means the build failed, and clicking it shows the line with the problem.
+JSON is picky. Keep the quotes and commas exactly as in the entries around your change. If the site doesn't update, look at the commit on GitHub: a red ❌ beside it means Vercel's build failed. Click it (or open the project on vercel.com) to see the line with the problem.
 
 ### Add an event (`content/events.json`)
 
@@ -152,7 +150,6 @@ styles/                 CSS, one file per area
 public/images/          Photos and the seal logo (served at /images/...)
   team/                 This year's team photos
   team/2025-26/         Past years' team photos, one folder per year
-.github/workflows/      Automatic build + publish to GitHub Pages
 ```
 
 ---
@@ -170,25 +167,30 @@ Before you push:
 
 ```bash
 npm run format     # tidies code formatting (Prettier)
-npm run build      # checks that everything builds; output goes to out/
+npm run build      # checks that everything builds
+npm run start      # optional: runs the built site at http://localhost:3000
 ```
 
 In VS Code, install the recommended Prettier extension when prompted. Files then format themselves on save.
 
 ## How publishing works
 
-1. Someone pushes to the `main` branch, either from their computer or by editing a file on GitHub.
-2. GitHub Actions runs `.github/workflows/deploy.yml`, which builds the site into plain HTML files.
-3. GitHub Pages serves those files. The whole process takes about 1–2 minutes, and you can watch it in the repo's **Actions** tab.
+The site is hosted on Vercel, which is connected to this GitHub repo.
 
-The site also rebuilds once a day to keep "Next event" and "Past events" current. Both sections also update in each visitor's browser, so a missed rebuild doesn't break anything.
+1. Someone pushes to the `main` branch, either from their computer or by editing a file on GitHub.
+2. Vercel notices the push, builds the site (`npm run build`) and puts the new version live. This takes about a minute, and you can watch it in the project's **Deployments** tab on vercel.com.
+3. Pushes to any other branch, and pull requests, get their own preview link from Vercel without touching the live site.
+
+"Next event" and "Past events" update in each visitor's browser, so they stay current between deployments.
 
 ### One-time setup
 
-In the repo, go to **Settings → Pages → Build and deployment** and set **Source** to **GitHub Actions**.
+1. On [vercel.com](https://vercel.com), choose **Add New → Project** and import this repo. Vercel detects Next.js on its own, so leave the build settings as they are.
+2. In this repo on GitHub, go to **Settings → Pages** and make sure GitHub Pages is turned off (**Source: None** / **Unpublish site**). The site is not published from GitHub.
 
 ## Notes for developers
 
-- The site is a static export (`output: "export"` in `next.config.ts`). There's no server, so API routes, server actions and `next/image` optimization aren't available.
+- Every page is pre-built at deploy time. Nothing on the site needs a server at the moment, but Vercel can run API routes, server actions and `next/image` if they're ever needed.
+- `app/layout.tsx` reads the site's own address from `VERCEL_PROJECT_PRODUCTION_URL`, which Vercel sets during the build. It's only used for link previews.
 - Event dates are stored as `YYYY-MM-DDTHH:mm` in Waterloo local time. `lib/dates.ts` formats dates by hand so the pre-built HTML matches what the browser shows.
 - Components that need today's date (`NextEventCard`, `EventsCalendar`, `PastEventsGallery`) are client components and use `useNow()`.

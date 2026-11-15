@@ -2,7 +2,7 @@
  * Loads the files in /content so pages can use them.
  *
  * To change the site's text, events or team, edit the JSON files in
- * /content. After a push to main, GitHub rebuilds the site with the new
+ * /content. After a push to main, Vercel rebuilds the site with the new
  * content.
  */
 import siteJson from "@/content/site.json";
