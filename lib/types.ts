@@ -20,7 +20,6 @@ export type SiteSettings = {
   about?: string;
   aboutImage?: string;
   programs?: { title: string; description?: string; image?: string }[];
-  joinSteps?: { title: string; description?: string }[];
   faq?: { question: string; answer?: string }[];
   gallery?: { image: string; caption?: string }[];
 };

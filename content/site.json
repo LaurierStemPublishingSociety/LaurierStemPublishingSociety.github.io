@@ -3,7 +3,6 @@
   "shortName": "LSPS",
   "tagline": "A home for STEM students who want to write, edit and publish.",
   "intro": "We're a Waterloo-campus club for students in science, tech, engineering and math who are curious about publishing in any field. We talk through how publishing actually works, help each other with our writing goals and bring in people from the industry.",
-  "joinUrl": "https://laurierstudentsunion.presence.io/organization/laurier-stem-publishing-society-waterloo",
   "email": "laurierstempublishingsociety@gmail.com",
   "instagram": "https://www.instagram.com/laurierstempublishingsociety",
   "tiktok": "https://www.tiktok.com/@lauriersps",
@@ -26,20 +25,6 @@
       "title": "Workshops and collaborations",
       "description": "Hands-on sessions and joint events with clubs that share our interests, so you meet people outside your own program.",
       "image": "/images/events/journal-workshop.jpg"
-    }
-  ],
-  "joinSteps": [
-    {
-      "title": "Sign up on Presence",
-      "description": "Join LSPS on the Laurier Students' Union Presence page so you get event updates."
-    },
-    {
-      "title": "Follow us on Instagram",
-      "description": "Event announcements, recaps and reminders go up there first."
-    },
-    {
-      "title": "Come to an event",
-      "description": "No experience needed. Pick anything on the calendar and say hi to an exec."
     }
   ],
   "faq": [

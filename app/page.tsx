@@ -21,12 +21,7 @@ export default function HomePage() {
         {site.tagline && <p className="tagline">{site.tagline}</p>}
         {site.intro && <p className="intro">{site.intro}</p>}
         <div className="hero-actions">
-          {site.joinUrl && (
-            <a className="btn btn-primary" href={site.joinUrl}>
-              Join on Presence
-            </a>
-          )}
-          <Link className="btn btn-ghost" href="/events/">
+          <Link className="btn btn-primary" href="/events/">
             See upcoming events
           </Link>
         </div>
@@ -62,7 +57,11 @@ export default function HomePage() {
 
       {/* ---------- What we do ---------- */}
       {site.programs && site.programs.length > 0 && (
-        <section className="section" id="programs" aria-labelledby="programs-title">
+        <section
+          className="section"
+          id="programs"
+          aria-labelledby="programs-title"
+        >
           <div className="wrap">
             <div className="section-head">
               <h2 id="programs-title">What we do</h2>
@@ -81,36 +80,6 @@ export default function HomePage() {
           </div>
         </section>
       )}
-
-      {/* ---------- How to join ---------- */}
-      <section className="section join" id="join" aria-labelledby="join-title">
-        <div className="wrap">
-          <div className="section-head">
-            <h2 id="join-title">How to join</h2>
-            <p>Anyone on campus interested in STEM and publishing is welcome.</p>
-          </div>
-          <ol className="steps">
-            {(site.joinSteps ?? []).map((step) => (
-              <li key={step.title}>
-                <h3>{step.title}</h3>
-                {step.description && <p>{step.description}</p>}
-              </li>
-            ))}
-          </ol>
-          <div className="join-actions">
-            {site.joinUrl && (
-              <a className="btn btn-primary" href={site.joinUrl}>
-                Join on Presence
-              </a>
-            )}
-            {site.instagram && (
-              <a className="btn btn-ghost" href={site.instagram}>
-                Follow on Instagram
-              </a>
-            )}
-          </div>
-        </div>
-      </section>
 
       {/* ---------- FAQ ---------- */}
       <section className="section" id="faq" aria-labelledby="faq-title">

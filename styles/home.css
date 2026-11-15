@@ -1,6 +1,6 @@
 /*
  * Home page sections.
- * Hero, next event card, about, what we do, how to join, FAQ.
+ * Hero, next event card, about, what we do, FAQ.
  */
 
 /* ---------- Hero ---------- */
@@ -232,84 +232,6 @@
   }
   .program h3 {
     margin-top: 14px;
-  }
-}
-
-/* ---------- Join steps (a real sequence, so numbered) ---------- */
-.join {
-  background: var(--plum);
-  color: #f3effa;
-  border-top: 0 !important;
-}
-.join .section-head h2 {
-  color: #fff;
-}
-.join .section-head p {
-  color: #d5cde6;
-}
-.steps {
-  list-style: none;
-  counter-reset: step;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-.steps li {
-  counter-increment: step;
-  border-top: 1.5px solid rgba(255, 255, 255, 0.28);
-  padding-top: 18px;
-}
-.steps li::before {
-  content: counter(step);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: var(--wax);
-  color: var(--plum-dark);
-  font-family: var(--serif);
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 14px;
-}
-.steps h3 {
-  color: #fff;
-  font-size: 21px;
-}
-.steps p {
-  margin-top: 6px;
-  color: #d5cde6;
-}
-.join .btn-primary {
-  background: var(--wax);
-  color: var(--plum-dark);
-  border-color: var(--wax);
-}
-.join .btn-primary:hover {
-  background: #c6ddd7;
-  border-color: #c6ddd7;
-}
-.join .btn-ghost {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.5);
-}
-.join .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-.join-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 40px;
-}
-.join :focus-visible {
-  outline-color: var(--wax);
-}
-@media (max-width: 760px) {
-  .steps {
-    grid-template-columns: 1fr;
   }
 }
 

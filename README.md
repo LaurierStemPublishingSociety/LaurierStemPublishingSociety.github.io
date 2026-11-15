@@ -12,7 +12,7 @@ It's built with [Next.js](https://nextjs.org) and hosted for free on GitHub Page
 | --------------------------------------------- | ----------------------------------------------------- |
 | Events                                        | `content/events.json`                                 |
 | Team members (each year's team)               | `content/team.json`                                   |
-| Home page text, FAQ, join steps, links, email | `content/site.json`                                   |
+| Home page text, FAQ, links, email             | `content/site.json`                                   |
 | Colours or fonts                              | `styles/tokens.css`                                   |
 | The top menu (add/remove a link)              | `components/SiteNav.tsx` (the `links` list)           |
 | The footer                                    | `components/SiteFooter.tsx`                           |
